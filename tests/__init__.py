@@ -100,7 +100,11 @@ if not settings.configured:
 			# Basic permissions which can be used to override stuff
 			'testapp.view_country': [
 
-			]
+			],
+			'testapp.manage_country': [
+				('testapp.view_country', 'all'),
+				('testapp.view_city', 'all'),
+			],
 		},
 		'GROUP_PERMISSIONS': {
 			'admin': [
